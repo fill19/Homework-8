@@ -22,7 +22,7 @@ public class Solutions {
 
          Map<UUID, TheMainCar> LowestPriceOnCars = comparisonOfCars.stream()
                 .sorted(Comparator.comparing(TheMainCar::getPrice).reversed()).limit(3).collect(Collectors.toMap(TheMainCar::getId,vehicle -> vehicle));
-        System.out.println("\nthe car with the lowest prices: ");
+        System.out.println("\nThe cars with the lowest prices: ");
         LowestPriceOnCars.forEach((key, value) -> System.out.println(key + ", " + value));
     }
 
