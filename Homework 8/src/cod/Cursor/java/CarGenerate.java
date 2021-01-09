@@ -9,8 +9,8 @@ public class CarGenerate {
 
 
         public static TheMainCar GeneratorOfCars() {
-            return new TheMainCar(getTradeMark(), getId(), getYear(), getMileage(), getPrice());
-        }
+        return new TheMainCar(getTradeMark(), getId(),getPrice(), getYear(), getMileage() );
+    }
 
     private static MarkOfCar getTradeMark() {
         int randomizerOfCars = (int) (Math.random() * 5);
@@ -22,10 +22,8 @@ public class CarGenerate {
     private static int getYear() {
         int min = 2000;
         int max = 2020;
-        int year = max - min;
-        Random random = new Random();
-        int cars = random.nextInt(year + 1);
-        return cars ;
+        int random = min + (int) (Math.random() * ((max - min) + 1));
+        return random;
     }
     private static int getMileage() {
         int min = 10000;
@@ -44,12 +42,5 @@ public class CarGenerate {
         int cars = random.nextInt(price + 1);
         return cars ;
     }
-
-
-
-
-
-
 }
-
 
