@@ -13,7 +13,7 @@ public class Solutions {
         List<TheMainCar> comparisonOfCars = machines.stream()
                 .filter(vehicle -> vehicle.getTradeMark().equals(MarkOfCar.Tesla)  || vehicle.getTradeMark().equals(MarkOfCar.Audi))
                 .filter(vehicle -> vehicle.getMileage() < 40000)
-                .filter(vehicle -> vehicle.getYear() < 2018)
+                .filter(vehicle -> vehicle.getYear() > 2018)
                 .sorted(Comparator.comparing(TheMainCar::getPrice).reversed())
                 .collect(Collectors.toList());
 
