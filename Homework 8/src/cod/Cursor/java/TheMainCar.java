@@ -9,7 +9,7 @@ public class TheMainCar {
     private int year;
     private int mileage;
 
-    public TheMainCar(MarkOfCar tradeMark, UUID id, int price,int year, int mileage ) {
+   public TheMainCar(MarkOfCar tradeMark, UUID id, int price, int year, int mileage) {
         this.id = id;
         this.tradeMark = tradeMark;
         this.price = price;
@@ -58,7 +58,7 @@ public class TheMainCar {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "\nThe car values: " + "\nId of car: " + id + "\nmileage: " + mileage + "\nPrice of car: " + price + "\nTrademark of car: " + tradeMark + "\nYear of car: " + year;
     }
 }
